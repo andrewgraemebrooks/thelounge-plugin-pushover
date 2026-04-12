@@ -1,0 +1,8 @@
+.vscode
+node_modules
+tests
+thelounge
+.gitignore
+.prettierrc
+compose.yaml
+eslint.config.mjs

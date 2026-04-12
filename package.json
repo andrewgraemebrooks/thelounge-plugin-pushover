@@ -1,0 +1,40 @@
+{
+    "name": "thelounge-plugin-pushover",
+    "version": "1.0.0",
+    "description": "A real-time notification plugin for The Lounge that sends mobile alerts via Pushover when your username is mentioned in IRC channels or via a direct message",
+    "keywords": [
+        "thelounge",
+        "thelounge-plugin",
+        "irc",
+        "pushover"
+    ],
+    "homepage": "https://github.com/andrewgraemebrooks/thelounge-plugin-pushover#readme",
+    "bugs": {
+        "url": "https://github.com/andrewgraemebrooks/thelounge-plugin-pushover/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/andrewgraemebrooks/thelounge-plugin-pushover.git"
+    },
+    "license": "MIT",
+    "author": "andrewgraemebrooks",
+    "type": "commonjs",
+    "main": "index.js",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "test": "node --test"
+    },
+    "dependencies": {
+        "thelounge": "^4.4.3"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "eslint": "^10.2.1",
+        "eslint-config-prettier": "^10.1.8",
+        "globals": "^17.5.0",
+        "nock": "^14.0.12",
+        "prettier": "3.8.3"
+    }
+}

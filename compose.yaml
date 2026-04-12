@@ -1,0 +1,13 @@
+services:
+    thelounge:
+        image: ghcr.io/thelounge/thelounge:latest
+        container_name: thelounge
+        ports:
+            - '9000:9000'
+            - '9229:9229'
+        # Uncomment for step debugging
+        # environment:
+        #   - NODE_OPTIONS=--inspect=0.0.0.0:9229
+        restart: always
+        volumes:
+            - ./thelounge:/var/opt/thelounge
