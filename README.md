@@ -10,74 +10,65 @@ Modifications include removing [ntfy](https://ntfy.sh) related logic and replaci
 
 If you would prefer to use ntfy for notifications, I would recommend their plugin.
 
+## Installation
+
+Via the `thelounge` command line:
+
+```bash
+thelounge install thelounge-plugin-pushover
+```
+
 ## Setup
 
-1. Go to the lounge's config folder in your installation. Inside you should have a packages folder.
-2. Clone this repo into that folder
-
-```bash
-git clone https://github.com/andrewgraemebrooks/thelounge-plugin-pushover
-```
-
-3. Install the plugin with the lounge
-
-```bash
-# Docker Install
-docker exec -it thelounge sh -c "thelounge install file:/var/opt/thelounge/packages/thelounge-plugin-pushover"
-# Non-Docker Install
-thelounge install file:full/path/to/the/plugin
-```
-
-4. Then in any channel setup the configuration of the plugin
-5. You can see all available commands by running
+1. You can see all available commands by running
 
 ```
 /pushover
 ```
 
-6. Set your pushover user key with
+2. Set your pushover user key with
 
 ```
 /pushover config set user <user key>
 ```
 
-7. Set your pushover user key with
+3. Set your pushover app token with
 
 ```
 /pushover config set token <app token>
 ```
 
-8.  (Optional) Enable direct message notifications
+4.  (Optional) Enable direct message notifications
 
 ```
 /pushover config set notify_on_pms true
 ```
 
-9.  You can double check your config with
+5.  You can double check your config with
 
 ```
 /pushover config print
 ```
 
-10. Test your connection with
+6. Test your connection with
 
 ```
 /pushover test
 ```
 
-11. If your test notification works, run
+7. If your test notification works, run
 
 ```
 /pushover start
 ```
 
-12. You can see whether or not the plugin is running with
+8. You can see whether or not the plugin is running with
 
 ```
 /pushover status
 ```
 
-13. Finally you can stop the plugin by running
+9. Finally you can stop the plugin by running
 
 ```
 /pushover stop
@@ -103,10 +94,10 @@ node --test tests/index.test.js
 docker compose up --detach
 ```
 
-3. Create a folder named `thelounge-plugin-pushover` in the `packages` subdirectory:
+3. Create a folder named `thelounge-plugin-pushover` and a sub folder `src` in the `packages` subdirectory:
 
 ```bash
-mkdir thelounge/packages/thelounge-plugin-pushover
+mkdir -p thelounge/packages/thelounge-plugin-pushover/src
 ```
 
 4. Symlink the files from the project into the packages folder:
@@ -114,6 +105,10 @@ mkdir thelounge/packages/thelounge-plugin-pushover
 ```bash
 ln package.json thelounge/packages/thelounge-plugin-pushover/package.json
 ln index.js thelounge/packages/thelounge-plugin-pushover/index.js
+ln src/command.js thelounge/packages/thelounge-plugin-pushover/src/command.js
+ln src/config.js thelounge/packages/thelounge-plugin-pushover/src/config.js
+ln src/handler.js thelounge/packages/thelounge-plugin-pushover/src/handler.js
+ln src/pushover.js thelounge/packages/thelounge-plugin-pushover/src/pushover.js
 ```
 
 5. Install the plugin

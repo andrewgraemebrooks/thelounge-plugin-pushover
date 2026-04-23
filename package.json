@@ -1,6 +1,6 @@
 {
     "name": "thelounge-plugin-pushover",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A real-time notification plugin for The Lounge that sends mobile alerts via Pushover when your username is mentioned in IRC channels or via a direct message",
     "keywords": [
         "thelounge",
@@ -25,6 +25,11 @@
     },
     "scripts": {
         "test": "node --test"
+    },
+    "thelounge": {
+        "name": "pushover",
+        "type": "plugin",
+        "supports": ">=4.0.0"
     },
     "dependencies": {
         "thelounge": "^4.4.3"
