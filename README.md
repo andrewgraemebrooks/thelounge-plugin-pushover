@@ -81,7 +81,7 @@ thelounge install thelounge-plugin-pushover
 Tests use Node's built-in test runner and [nock](https://github.com/nock/nock) for HTTP mocking. No extra setup required.
 
 ```bash
-node --test tests/index.test.js
+npm run test
 ```
 
 ### Install the plugin
